@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# BCV Frontend Developer Coding Excercise
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Instructions
 
-## Available Scripts
+Using data from 3 different endpoints (posts, users, properties), build an application that displays the post data as shown in the next images, use them as a guideline. Create a project in github and make sure the app can be started locally for review. After completing everything, record a screencast with a walkthrough over the application and the codebase. Be meticulous about this. 
 
-In the project directory, you can run:
+### Endpoints:
+- https://bcv-fe-interview-api.azapata.io/api/posts
+- https://bcv-fe-interview-api.azapata.io/api/users
+- https://bcv-fe-interview-api.azapata.io/api/properties
 
-### `yarn start`
+#### Post List
+![Alt text](images/posts.png?raw=true "Posts")
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### Error Screen
+![Alt text](images/error.png?raw=true "Error")
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### Loading State
+![Alt text](images/loading.png?raw=true "Loading")
 
-### `yarn test`
+### Product Considerations
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Some relationships are missing, so not all posts have user or proeprty data. Add the appropiate logic so the the word "Unknown" is shown when there isn't user or property data associated with a post.
 
-### `yarn build`
+2. Show a loading state/loading spinner while the data is being fetched. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. The application must not fail silently.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Dates should all have the same format.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5. Any social network icon pack can be used. There should be a default icon when no network is present.
 
-### `yarn eject`
+6. There is one social network that has two different names, but should be treated as one. 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+7. Make sure post content is sanitized.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+8. Images should have a placeholder while they're loading. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+9. @mentions should be bold and have a light colored background.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+10. The application should look decent on mobile devices.
 
-## Learn More
+### Technical Considerations
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Must use react with hooks
+2. Must use react-redux with hooks
+3. Must git 
+4. Must use the fetch API
+5. Clean and readable code is highly valued
+5. If create-react-app is used, make sure to clean up and remove anything that's not used.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
